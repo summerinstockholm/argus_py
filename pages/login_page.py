@@ -11,6 +11,7 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.USER_PASS), "pass form is not presented"
         assert self.is_element_present(*LoginPageLocators.ENTER_BTN), "enter button is not presented"
     def authorize_in_system(self):
+        # проверка на авторизацию с вводом логина и пароля.
         username = 'ARGUS_TESTER_MRF'
         password = '789789789'
         username_form = self.browser.find_element(*LoginPageLocators.USER_LOGIN)
